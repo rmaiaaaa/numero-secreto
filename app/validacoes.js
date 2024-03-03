@@ -2,6 +2,13 @@ function verificaChutePossuiValorValido(chute) {
 
     const numero = +chute
 
+    if (chuteGameOver(chute)){
+        document.body.innerHTML = `
+            <h2>O jogo acabou!</h2>
+            <button id="jogar-novamente" class="btn-jogar">Jogar novamente</button>
+        `
+    }
+
     if (chuteFormatoInvalido(numero)){
         elementoChute.innerHTML += `
         <div>Valor inválido</div>
@@ -34,8 +41,6 @@ function verificaChutePossuiValorValido(chute) {
         <div>O número secreto é menor <i class="fa-solid fa-arrow-down"></i> </div>
     `
     }
-
-
 }
 
 function chuteDentroDoIntervalo(numero) {
@@ -53,3 +58,12 @@ document.body.addEventListener('click', e => {
     }
 
 })
+
+function chuteGameOver(numero) {
+
+    if (chuteDentroDoIntervalo(numero)) {
+        return false
+    }
+    
+    return (numero == 'game over')
+}
