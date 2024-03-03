@@ -2,8 +2,9 @@
 
 :root {
     --font-family: "Dosis", sans-serif;
-    --bg-color: #344955;
-    --primary-collor: #78A083;
+    --bg-color: #1B4242;
+    --primary-collor: #5C8374;
+    --btn-collor: #9EC8B9;
 }
 
 body {
@@ -23,6 +24,11 @@ h1 {
     font-size: 2em;
 }
 
+h2 {
+    font-size: 4em;
+    margin-top: 20px;
+}
+
 h3 {
     font-size: 3em;
     margin-top: 20px;
@@ -39,4 +45,12 @@ h3 {
     font-size: 4em;
     padding: 10px;
     margin: 20px;
+}
+
+.btn-jogar {
+    padding: 8px 15px;
+    border: 2px;
+    background-color: var(--btn-collor);
+    border-radius:  5px;
+    margin-top: 5px;
 }
